@@ -1,0 +1,17 @@
+﻿@using Examples.Models 
+@model Customer[]
+@{
+    ViewData["Title"] = "Customers";
+}
+
+<div>Customers</div>
+
+<ul>
+    @foreach (var customer in Model)
+    {
+        <li>@customer.CustomerId @customer.FirstName @customer.LastName</li>
+    }
+</ul>
+
+<div>Reload the page and see how the cache speeds up the data loading.  
+    Then wait until the cache expires and the data loading will be slow again.</div>
